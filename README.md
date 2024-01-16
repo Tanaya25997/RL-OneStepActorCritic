@@ -40,7 +40,7 @@ This method gives the action that the environment should state based on it’s c
 Since we are using a parameterized policy, therefore, softmax function is being used to calculate the
 probabilities for each action. Based on the probabilities, a random choice of action is performed.
 
-4.gradient ln policy(args):
+4. gradient ln policy(args):
 This method calculates the gradient of the policy with respect to the parameters theta of the policy.
 This has been implemented using the definition of gradient as described in the lecture notes (Section
 11.6 Pages 104,105). To recapitulate, the gradient with respect to theta is a matrix of size |A| ∗ |ϕ(s)| where |A| is the
@@ -49,7 +49,7 @@ for each action with the state feature (this constitutes each row of the matrix)
 action chosen for which the row is obtained by multiplying the state feature with (1 - the softmax
 probability for that action).
 
-7. actor critic algorithm(env, episodes):
+5. actor critic algorithm(env, episodes):
 This is the main algorithm. I’m running the code for a total of 1000 episodes. Inside each episode,
 the environment is initialized and then episode is run until the termination (the goal is accomplished)
 or the truncation (episode length over 500 for Acrobot and 200 for Mountain Car) is reached. Once
